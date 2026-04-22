@@ -12,10 +12,13 @@ This program reads student names and scores, calculates their average, and displ
 
 ## Example Output
 Student: Alex
+
 Average: 88.5
+
 Grade B
 
 ## Author
 Alexi A. Soriano
 
 //Updated README with lab instructions
+//Spacing in "Example Output" section updated to properly indent; Updated by Jason Ardan Chodur
