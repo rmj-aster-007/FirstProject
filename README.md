@@ -23,3 +23,6 @@ Alexi A. Soriano
 //Updated README with lab instructions
 
 //Spacing in "Example Output" section updated to properly indent; Updated by Jason Ardan Chodur
+
+## Collaboration Acknowledgment
+This project was reviewed and edited by Jason Ardan Chodur on GitHub.
