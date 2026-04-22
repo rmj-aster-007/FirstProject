@@ -1,32 +1,57 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+class MovieTicket {
 
-public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
-        // TODO A1: Create a File object for "grades.txt"
-        // TODO A2: Use try–catch to handle FileNotFoundException
+// ===== Part A: Class Definition =====
+// TODO A: Create two properties:
+// - movieName (String)
+// - pricePerTicket (double)
 
-        try {
-            // TODO B1: Create a Scanner to read the file
-            // TODO B2: Print "Student Grades:"
-            // TODO B3: Read and print each line from the file
+    String movieName;
+    double pricePerTicket;
 
-            File myFile = new File("grades.txt");
-            Scanner input = new Scanner(myFile);
 
-            System.out.println("Student Grades: ");
-            while (input.hasNextLine()) {
-                System.out.println(input.nextLine());
-            }
-            input.close();
+// ===== Part B: Constructor (With Parameters) =====
+// TODO B: Add a constructor that accepts:
+// - movieName
+// - pricePerTicket
+//
+// The constructor must:
+// 1. Receive these values from main()
+// 2. Assign them to the instance variables
 
-        } catch (Exception e) {
-            // TODO C1: Print "File not found!" if grades.txt is missing
+    MovieTicket(String m, double p) {
+        movieName = m;
+        pricePerTicket = p;
+    }
 
-            System.out.println("File not found!");
-        }
+// ===== Part C: Method (With Parameter & Return) =====
+// TODO C: Add a method calculateTotalCost(int numberOfTickets)
+// This method should:
+// 1. Calculate pricePerTicket * numberOfTickets
+// 2. Return the result
+
+    double calculateTotalCost(int numberOfTickets) {
+        double totalCost = pricePerTicket * numberOfTickets;
+        return totalCost;
     }
 }
 
+public class Main {
+    public static void main(String[] args) {
 
+// ===== Part D: Object Creation & Method Calls =====
+// TODO D1: Create one MovieTicket object.
+// Example: "Avatar", 12.5
+
+    MovieTicket ticket = new MovieTicket("Avatar", 12.5);
+
+// TODO D2: Call calculateTotalCost(3)
+// Store the returned value in a variable.
+
+    double total = ticket.calculateTotalCost(3);
+
+// TODO D3: Print:
+// "Total Cost: $[value]"
+
+    System.out.println("Total Cost: $" + total);
+    }
+}
